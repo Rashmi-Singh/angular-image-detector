@@ -1,0 +1,73 @@
+$primary: #ff6600;
+$primary-light: #ff8330;
+$primary-dark: #cf5300;
+
+$secondary: #6699cc;
+$secondary-light: #83acd6;
+$secondary-dark: #537ca6;
+
+$background: #eae9e9;
+$background-light: #f7e7e7;
+$background-dark: #595656;
+$foreground: #fff;
+
+$title-font-color: #212121;
+$title-font-family: 'Open Sans';
+$title-font-size: 16px;
+$title-font-style: normal;
+
+$content-font-color: #757575;
+$content-font-family: 'Open Sans';
+$content-font-size: 14px;
+$content-font-style: normal;
+
+// fonts
+
+$font-stack: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+$font-stack-open-sans: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+$font-size-default: $content-font-size;
+$font-size-secondary: $content-font-size - 1px;
+$font-size-footer: $content-font-size - 2px;
+$font-size-heading-1: $title-font-size + 32px;
+$font-size-heading-2: $title-font-size + 14px;
+$font-size-heading-3: $title-font-size + 8px;
+$font-size-heading-4: $title-font-size + 4px;
+$font-size-heading-5: $title-font-size + 2px;
+$font-size-heading-6: $title-font-size - 2px;
+$font-size-subheading: $title-font-size;
+$letter-spacing-default: 0.08em;
+
+// line-height
+
+$line-height-default: 24px;
+$line-height-secondary: 24px;
+$line-height-heading-1: 60px;
+$line-height-heading-2: 36px;
+$line-height-heading-3: 36px;
+$line-height-heading-4: 24px;
+$line-height-subheading: 24px;
+
+// colors : default
+
+$primary-background-color: $background;
+$primary-foreground-color: $foreground;
+
+$primary-font-dark-color: $title-font-color;
+$primary-font-light-color: $content-font-color;
+
+$primary-font-title-color: $title-font-color;
+$primary-font-content-color: $content-font-color;
+
+$primary-card-header-color: $primary-font-dark-color;
+$primary-table-header-color: $primary-font-light-color;
+
+// colors : elements
+$sidebar-item-color: #669acc;
+$border-color: #e7e7e7;
+$link-disable-color: grey;
+$link-default-color: #20b8d6;
+$error-color: #ff000c;
+$warn-color: #f3b823;
+$success-color: #54b34a;
+$info-color: #3966c3;
+$snackbar-font-color: #fff;

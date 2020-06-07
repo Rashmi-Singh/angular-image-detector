@@ -1,0 +1,25 @@
+<div class="classifier-container">
+  <div class="title">Image Detector: </div>
+
+  <div class="file-upload-section">
+    <input pInputText type="file" class="custom-file-input" (change)="fileChangeEvent($event)">
+    <!-- <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*"
+      (onUpload)="fileChangeEvent($event)"></p-fileUpload> -->
+  </div>
+
+  <div [hidden]="hideImage">
+    <img #image [src]="imageSrc" />
+    <!-- <button (click)="predictImage()">Predict</button> -->
+  </div>
+
+  <div *ngIf="isLoading">
+    Loading predictions...
+  </div>
+
+  <div class="prediction-section" *ngIf="!isLoading && predictions.length">
+    <div class="prediction-header">Image Predictions-</div>
+    <div *ngFor="let prediction of predictions">
+      {{prediction.className}} - {{prediction.probability}}%
+    </div>
+  </div>
+</div>
