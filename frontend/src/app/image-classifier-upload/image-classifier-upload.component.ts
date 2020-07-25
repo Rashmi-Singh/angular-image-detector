@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 
 @Component({
@@ -18,9 +19,10 @@ export class ImageClassfierUploadComponent implements OnInit {
   imageSrc: string;
   isLoading: boolean;
   model: mobilenet.MobileNet;
+  response: any;
 
-
-  constructor() { }
+  constructor(private httpClient: HttpClient) {
+  }
 
   async ngOnInit() {
     this.imageSrc = '';

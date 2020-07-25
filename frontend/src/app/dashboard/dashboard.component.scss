@@ -1,0 +1,13 @@
+.dashboard-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .welcome-text {
+        padding: 15px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+}

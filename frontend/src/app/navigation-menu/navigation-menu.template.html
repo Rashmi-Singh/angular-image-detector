@@ -1,0 +1,21 @@
+<div class="menu-container" [class.menu-background]="showMenu">
+    <!-- <p-card styleClass="menu-container"> -->
+        <div>
+            <button (click)="transformMenu()" *ngIf="!showMenu" class="menu-icon" icon="pi pi-bars" id="menuBtn" pButton
+                type="button"></button>
+
+            <div *ngIf="showMenu" class="menu-content" id="menuContent">
+                <div class="menu-button-section">
+                    <button (click)="transformMenu()" class="menu-icon" icon="pi pi-bars" pButton
+                        type="button"></button>
+                </div>
+
+                <div (click)="selectMenuItem(item.id)" *ngFor="let item of menuItems" class="menu-item"
+                    [class.menu-item-active]="item.id === selectedItem">
+                    <i class="pi pi-chevron-right"></i>
+                    <span class="menu-item-text">{{item.label}}</span>
+                </div>
+            </div>
+        </div>
+    <!-- </p-card> -->
+</div>

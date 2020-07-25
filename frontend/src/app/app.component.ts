@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import * as tf from '@tensorflow/tfjs';
 // Adds the WASM backend to the global backend registry.
 import '@tensorflow/tfjs-backend-wasm';
@@ -10,17 +12,15 @@ import '@tensorflow/tfjs-backend-wasm';
 })
 
 export class AppComponent implements OnInit {
+  employeeData: JSON;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
 
-    //   this.httpClient.get<any>(`/api/items?page=${2}`).subscribe(x => {
-    //     const pager = x.pager;
-    //     const pageOfItems = x.pageOfItems;
-
-    //     alert(`${pager} and ${pageOfItems}`);
-    // });
+    this.httpClient.get<JSON>('/api/employees').subscribe((data) => {
+      this.employeeData = data as JSON;
+    });
   }
 
   async setBackend() {

@@ -1,0 +1,27 @@
+<div class="doc-modifier-container">
+    <form [formGroup]="documentFormGroup">
+
+        <div>Type of document section: </div>
+        <p-multiSelect [options]="sectionTypes" [showHeader]="false" formControlName="targetElement"></p-multiSelect>
+
+        <div *ngIf="showParaFields">
+            <h4>Within Paragraph</h4>
+            <div>Search for (text): </div>
+            <input pInputText type="text" formControlName="searchStringPara" />
+
+            <div>Replace with (text): </div>
+            <input pInputText type="text" formControlName="replacementStringPara" />
+        </div>
+
+        <div *ngIf="showTableFields">
+            <h4>Within Table</h4>
+            <div>Search for (text): </div>
+            <input pInputText type="text" formControlName="searchStringTable" />
+
+            <div>Replace with (text): </div>
+            <input pInputText type="text" formControlName="replacementStringTable" />
+        </div>
+
+        <button (click)="updateDocument()" [disabled]="documentFormGroup.invalid">Update Document</button>
+    </form>
+</div>
