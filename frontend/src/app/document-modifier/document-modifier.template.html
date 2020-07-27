@@ -22,6 +22,6 @@
             <input pInputText type="text" formControlName="replacementStringTable" />
         </div>
 
-        <button (click)="updateDocument()" [disabled]="documentFormGroup.invalid">Update Document</button>
+        <button pButton type="button" class="ui-button-rounded" (click)="updateDocument()" [disabled]="documentFormGroup.invalid" label="Update Document"></button>
     </form>
 </div>

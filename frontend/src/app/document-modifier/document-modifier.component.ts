@@ -51,13 +51,13 @@ export class DocumentModifierComponent implements OnInit {
 
     updateDocument(): void {
         const requestData = {
-            sourcePath: 'D:\\angular-image-detector\\frontend\\src\\assets\\docs\\template.docx',
+            sourcePath: '', // add absolute path of source file
             searchStringPara: this.documentFormGroup.value.searchStringPara,
             replacementStringPara: this.documentFormGroup.value.replacementStringPara,
             searchStringTable: this.documentFormGroup.value.searchStringTable,
             replacementStringTable: this.documentFormGroup.value.replacementStringTable,
             targetElement: this.documentFormGroup.value.targetElement,
-            targetPath: 'D:\\angular-image-detector\\frontend\\src\\assets\\docs\\template1.docx',
+            targetPath: '', // add absolute path of destination file
         };
 
         this.httpClient.post('/api/document', requestData).subscribe((data) => {
